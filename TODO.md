@@ -1,6 +1,0 @@
-- [ ] Split `src/App.jsx` into page/section components under `src/pages/` (Home, About, Services, Packages, Contact)
-- [ ] (In same refactor) optionally split remaining sections (Navbar, Partners, Vision, Virtual360, Testimonials, Blog, Footer)
-- [ ] Move section JSX out of `App.jsx` into corresponding components while preserving required props/state
-- [ ] Keep anchor-based scrolling (`href="#about"`, etc.) working by preserving section `id` values
-- [ ] Keep global styling strategy (initially keep existing `CSS_STYLES` in `App.jsx` to avoid regressions)
-- [ ] Verify build/dev renders and contact form + gravity toggle + testimonials work
