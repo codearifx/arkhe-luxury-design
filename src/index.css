@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #c5a880;
+  --color-gold-hover: #dfc19b;
+  --color-gold-dark: #9a7d56;
+  
+  --color-luxury-beige: #f9f6f0;
+  --color-luxury-dark: #09090b;
+  --color-luxury-charcoal: #18181b;
+  --color-luxury-border: #e4e4e7;
+  
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom CSS Styles */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #ffffff;
+  color: #18181b; /* zinc-900 equivalent */
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar for premium aesthetics */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e4e4e7; /* zinc-200 */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a880; /* gold */
+}
+
+/* Clean transition for navbar links and buttons */
+.transition-luxury {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Glassmorphism panel for premium floating widgets */
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.glass-panel-dark {
+  background: rgba(9, 9, 11, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Elegant keyframe animations */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes scrollBounce {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 1;
+  }
+}
+
+.animate-scroll-bounce {
+  animation: scrollBounce 2s infinite ease-in-out;
+}
+
+@keyframes slowPan {
+  0%, 100% {
+    transform: scale(1.03) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.08) translate(-0.5%, -0.5%);
+  }
+}
+
+.animate-slow-pan {
+  animation: slowPan 30s infinite ease-in-out;
+}
